@@ -25,8 +25,8 @@ function App() {
   };
   return (
     <div className="app-container">
-      <Header name="Navneet+Gupta" />
       <Router>
+        <Header name="Navneet+Gupta" />
         <Switch>
           <Route exact path="/"
             render={props => (
