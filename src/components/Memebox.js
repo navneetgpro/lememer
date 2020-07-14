@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Memebox = ({ meme }) => {
-    const { id, userName, imageUrl, profileUrl } = meme;
+    const { userName, imageUrl, profileUrl } = meme;
     return (
         <div>
             <div style={Stylesheet.feed}>

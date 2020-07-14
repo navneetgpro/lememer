@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import Content from './components/Content';
+import Memefeed from './components/Memefeed';
+import Hashtag from './components/pages/Hashtag';
+import Profile from './components/pages/Profile';
+import Notfound from './components/layout/Notfound';
 import './App.css';
 import axios from 'axios';
 
@@ -22,8 +26,22 @@ function App() {
   return (
     <div className="app-container">
       <Header name="Navneet+Gupta" />
-      <Content memes={memes} loading={loading} />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route exact path="/"
+            render={props => (
+              <Memefeed
+                memes={memes}
+                loading={loading}
+              />
+            )}
+          />
+          <Route exact path="/hashtag" component={Hashtag} />
+          <Route exact path="/profile" component={Profile} />
+          <Route path="*" component={Notfound} />
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }

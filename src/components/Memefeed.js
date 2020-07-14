@@ -2,7 +2,7 @@ import React from 'react';
 import Memebox from './Memebox';
 import Loader from './Loader';
 
-const Content = ({ memes, loading }) => {
+const Memefeed = ({ memes, loading }) => {
     if (loading) {
         return <Loader />
     } else {
@@ -17,4 +17,4 @@ const Content = ({ memes, loading }) => {
         )
     }
 }
-export default Content;
+export default Memefeed;
