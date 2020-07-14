@@ -6,7 +6,22 @@
   list-style-type: none;
   font-family: sans-serif;
 }
-
+.circle-div{
+  background: #f0e9e9;
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  border-radius: 50%;
+  border: 1px solid;
+  right: 32px;
+  bottom: 64px;
+  left: unset;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .app-container {
   /* The app can only be the height of the viewport */
   display: flex;

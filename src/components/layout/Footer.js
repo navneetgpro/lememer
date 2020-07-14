@@ -3,6 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
+            <button class="circle-div"><i className="fa fa-upload"></i></button>
             <footer>
                 <nav>
                     <ul className="footmenu">
